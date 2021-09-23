@@ -10,6 +10,13 @@ int y = 9;
 
 
 int main(){
+  int NumA;
+  int NumB;
+  printf("A: ");
+   scanf("%d", &NumA);
+   printf("B: ");
+   scanf("%d", &NumB);
+
     printf("Hello World\n");
     printf("%d\n",maxValue(5, 10));
     printf("%d\n",maxValue(10, 5));
@@ -67,6 +74,10 @@ if (20 > 18) {
   printf("20 is greater than 18");
 }
 printf("\n");
+printf("A+B = %d\n",NumA+NumB);
+printf("A-B = %d\n",NumA-NumB);
+printf("A*B = %d\n",NumA*NumB);
+printf("A/B = %d\n",NumA/NumB);
     return 0;
 }
 int maxValue(int a, int b){
