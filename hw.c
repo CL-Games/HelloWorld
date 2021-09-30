@@ -84,8 +84,12 @@ printf("A/B = %d\n",NumA/NumB);
 int i = 1;
 
 while(i <= 100){
-      printf("%d\n", i);
-      i++;
+    switch(100 % i == 0){
+        case 1:
+        printf("%d\n", i);
+        break;
+    }
+    i++;
 }
 
 int op;
