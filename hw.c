@@ -19,6 +19,34 @@ int main(){
    scanf("%d", &NumB);
    printf("Operation: ");
    scanf(" %c" ,&Operation);
+
+   int count = 1 ;
+   int num = 10;
+   int guess;
+   int sum = 0 ;
+for (int x=2 ; x<=100 ; x+=2)
+{
+    if  (x % 10 == 0)          //  如果 x是10的倍數則閃過後面的 sum = sum + x; 敘述
+        continue ;
+    sum = sum + x;
+}
+printf ("總和：%d \n", sum) ;
+while (1)
+{
+    printf ("第 %d 次猜測：\n", count) ;
+    printf ("請猜測一數：") ;
+    scanf ("%d", &guess) ;
+    if (guess > num)
+        printf ("太大！\n") ;
+    else if (guess < num)
+        printf ("太小！\n") ;
+    else
+    {
+        printf ("猜中了！\n") ;
+        break ;
+    }
+    count++ ;         //  如果猜中了則此行不會執行
+}   // while loop
     printf("Hello World\n");
     printf("%d\n",maxValue(5, 10));
     printf("%d\n",maxValue(10, 5));
@@ -90,6 +118,24 @@ while(i <= 100){
         break;
     }
     i++;
+}
+i = 1;
+do{
+  switch(100 % i == 0){
+        case 1:
+        printf("%d\n", i);
+        break;
+    }
+    i++;
+}
+while(i <= 100);
+
+for (int i = 1; i<= 100; i++){
+    switch(100 % i == 0){
+        case 1:
+        printf("%d\n", i);
+        break;
+    }
 }
 
 int op;
