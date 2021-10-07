@@ -8,10 +8,16 @@ bool a = 1;
 int x = 10;
 int y = 9;
 
+int myNum[] = {1,2,3,4,5};
+
 
 int main(){
   int NumA;
   int NumB;
+  int num12 = 10;
+  int num23 = 20;
+  int *num34 = 10;
+  int *num45 = 20;
   char Operation;
   printf("A: ");
    scanf("%d", &NumA);
@@ -174,7 +180,44 @@ switch(op){
 
    } 
    printf("\n");
+   bca(10, 121);
+    printf("\n");
+    printf("%d\n", num12);
+    printf("%d\n", num23);
+    printf("\n");
+    swapNums(&num12, &num23);
+    printf("num12: %d\n", num12);
+    printf("num23: %d\n", num23);
+    printf("\n");
+    printf("num12: 0x%x\n", &num12);
+    printf("num23: 0x%x\n", &num23);
+
+    printf("num34: %d\n", num34);
+    printf("num45: %d\n", num45);
+
+    for (int i = 0; i < sizeof(myNum) / sizeof(myNum[0]); i++){
+        printf("%d\n", myNum[i]);
+    }
+    printf("sizeof of array: %d\n", (int) sizeof(myNum));
+    printSizeOf(myNum);
+
+    printf("Length of array: %d\n", (int)( sizeof(myNum) / sizeof(myNum[0]) ));
+    printLength(myNum);
     return 0;
+}
+void printSizeOf(int intArray[])
+{
+    printf("sizeof of parameter: %d\n", (int) sizeof(intArray));
+}
+
+void printLength(int intArray[])
+{
+    printf("Length of parameter: %d\n", (int)( sizeof(intArray) / sizeof(intArray[0]) ));
+}
+void bca(int abc, int def){
+    printf("OK\n");
+    printf("%d\n", abc);
+    printf("%d\n", def);
 }
 int maxValue(int a, int b){
     if(a > b){
@@ -183,6 +226,12 @@ int maxValue(int a, int b){
     else{
       return b;
     }
+}
+void swapNums(int *x, int *y) {
+  int z;
+  z = *x;
+  *x = *y;
+  *y = z;
 }
 int minValue(int a, int b){
     if(a < b){
