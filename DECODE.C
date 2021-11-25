@@ -23,7 +23,7 @@ int main() {
       }
       }
     }
-    printf("%s", name);
+    puts(name);
 
     return 0;
 }
