@@ -36,21 +36,21 @@ int main(void)
     int arr[100000];
     int temp[100000];
     int result;
-    int a;
+    int asse;
     int na = sizeof(temp) / sizeof(temp[0]);
     for (int i = 0; i < 10; i++){
     
-    a=(rand()%10)+1;
-    result = binarySearch(temp, 0, na - 1, a);
+    asse=(rand()%10)+1;
+    result = binarySearch(temp, 0, na - 1, asse);
     cout << result << " ";
     if(result != -1){
      while (result != -1){
-      a=(rand()%10)+1;
-      result = binarySearch(temp, 0, na - 1, a);
+      asse=(rand()%10)+1;
+      result = binarySearch(temp, 0, na - 1, asse);
      }
     }
-    arr[i] = a;
-    temp[i] = a;
+    arr[i] = asse;
+    temp[i] = asse;
     }
     cout <<"\n";
     for (int i = 0; i < 10; i++){

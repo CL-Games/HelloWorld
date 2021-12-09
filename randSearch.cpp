@@ -22,6 +22,7 @@ int main(void)
     srand(time(NULL));
     int arr[999999];
     int temp[99999];
+    int temp2[99999];
     int result;
     int a;
     int na = sizeof(temp) / sizeof(temp[0]);
@@ -42,16 +43,32 @@ int main(void)
     for (int i = 0; i < 10000; i++){
       cout << arr[i] << " ";
     }
-    int x = 1;
+    int x;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int nb = sizeof(temp2) / sizeof(temp2[0]);
+    cout << "\n";
+    for(int i = 0; i < 100; i++){
+    x = (rand()%10000)+1;
+    result = search(temp2, nb, x);
+    if(result != -1){
+     
+     while (result != -1){
+      x=(rand()%10000)+1;
+      result = search(temp, nb, x);
+     }
+    }
+    temp2[i] = x;
     //cout << "\nFind what? ";
     //cin >> x;
    
-    int n = sizeof(arr) / sizeof(arr[0]);
    
     // Function call
+    cout << i << ": ";
+    cout << x << ": ";
      result = search(arr, n, x);
     (result == -1)
-        ? cout << "Element is not present in array"
-        : cout << "Element is present at index " << result;
+        ? cout << "Element is not present in array" << "\n"
+        : cout << "Element is present at index " << result << "\n";
+    }
     return 0;
 }
