@@ -33,16 +33,17 @@ int binarySearch(int arr[], int l, int r, int x)
 int main(void)
 {
     srand(time(NULL));
-    int arr[100000];
-    int temp[100000];
+    int arr[10];
+    int temp[10];
     int result;
     int asse;
     int na = sizeof(temp) / sizeof(temp[0]);
     for (int i = 0; i < 10; i++){
     
     asse=(rand()%10)+1;
+    cout << asse<< "\n";
     result = binarySearch(temp, 0, na - 1, asse);
-    cout << result << " ";
+    cout << result << "\n";
     if(result != -1){
      while (result != -1){
       asse=(rand()%10)+1;
