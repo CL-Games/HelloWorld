@@ -20,31 +20,31 @@ int search(int arr[], int n, int x)
 int main(void)
 {
     srand(time(NULL));
-    int arr[99];
-    int temp[99];
+    int arr[999999];
+    int temp[99999];
     int result;
     int a;
     int na = sizeof(temp) / sizeof(temp[0]);
-    for (int i = 0; i < 99; i++){
+    for (int i = 0; i < 10000; i++){
     
-    a=(rand()%99)+1;
+    a=(rand()%10000)+1;
     result = search(temp, na, a);
     if(result != -1){
      
      while (result != -1){
-      a=(rand()%99)+1;
+      a=(rand()%10000)+1;
       result = search(temp, na, a);
      }
     }
     arr[i] = a;
     temp[i] = a;
     }
-    for (int i = 0; i < 99; i++){
+    for (int i = 0; i < 10000; i++){
       cout << arr[i] << " ";
     }
-    int x = 0;
-    cout << "\nFind what? ";
-    cin >> x;
+    int x = 1;
+    //cout << "\nFind what? ";
+    //cin >> x;
    
     int n = sizeof(arr) / sizeof(arr[0]);
    

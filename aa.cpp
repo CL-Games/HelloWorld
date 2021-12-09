@@ -32,38 +32,10 @@ int binarySearch(int arr[], int l, int r, int x)
  
 int main(void)
 {
-    srand(time(NULL));
-    int arr[100000];
-    int temp[100000];
-    int result;
-    int a;
-    int na = sizeof(temp) / sizeof(temp[0]);
-    for (int i = 0; i < 10; i++){
-    
-    a=(rand()%10)+1;
-    result = binarySearch(temp, 0, na - 1, a);
-    cout << result << " ";
-    if(result != -1){
-     while (result != -1){
-      a=(rand()%10)+1;
-      result = binarySearch(temp, 0, na - 1, a);
-     }
-    }
-    arr[i] = a;
-    temp[i] = a;
-    }
-    cout <<"\n";
-    for (int i = 0; i < 10; i++){
-      cout << arr[i] << " ";
-    }
-    int x = 1;
-    //cout << "\nFind what? ";
-    //cin >> x;
-   
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 402;
     int n = sizeof(arr) / sizeof(arr[0]);
-   
-    // Function call
-     result = binarySearch(arr, 0, n - 1, x);
+    int result = binarySearch(arr, 0, n - 1, x);
     (result == -1)
         ? cout << "Element is not present in array"
         : cout << "Element is present at index " << result;
